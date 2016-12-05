@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>mockjs&nbsp;and&nbsp;jdists&nbsp;demo</title>
+  <style>
+  ul, li {
+    list-style: none;
+    display: inline-block;
+  }
+  li img {
+    width: 12.36vw;
+    height: 20vw;
+  }
+  li p {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <ul>
+    <li v-for="(item, index) in items">
+      <a :href="item.url" target="blank">
+      	<img :src="item.img">
+      </a>
+      <p>{{item.title}}</p>
+    </li>
+  </ul>
+</body>
+<script src="node_modules/h5ajax/h5ajax.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+var vueMovie = new Vue({
+  el: 'ul',
+  data: {
+    items: []
+  }
+});
+h5ajax.get('/get/movieRanks', function (err, data) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  vueMovie.items = data;
+});
+</script>
+</html>

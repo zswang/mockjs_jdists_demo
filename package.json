@@ -1,0 +1,23 @@
+{
+  "name": "mockjs_jdists_demo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "mockjs and jdists demo",
+  "scripts": {
+    "gulp-dist": "gulp",
+    "fis-dist": "fis3 release -d fis-dist"
+  },
+  "author": "zswang (http://weibo.com/zswang)",
+  "license": "MIT",
+  "devDependencies": {
+    "fis-parser-jdists": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-jdists": "^2.0.0",
+    "jdists": "^2.0.1",
+    "mockjs": "^1.0.0"
+  },
+  "dependencies": {
+    "h5ajax": "0.0.5",
+    "vue": "^2.1.4"
+  }
+}
